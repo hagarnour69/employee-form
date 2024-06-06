@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "pacifico-r";
+  src: url(../webfonts/Domine-Medium.ttf);
+}
+
+:root {
+  --my-heading-font: "Pacifico-r";
+  --mybackground-color:#0B0B45;
+}
+body
+{
+    background-color: var(--mybackground-color);
+}
+h1 {
+  font-family: var(--my-heading-font);
+  font-size: 4.375rem;
+  background-image: linear-gradient(to right, #fff,#88CBFA,#0160C9,#0041C7);
+  background-clip:text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+
+.Product img {
+  width: 50px;
+  height: auto;
+  object-fit: contain;
+  
+}

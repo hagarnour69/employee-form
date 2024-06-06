@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Form</title>
+    <link rel="icon" href="./images/R.png">
+
+    <!--bootstraplink-->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!--stylelink-->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="">
+    <h1 class="text-center p-5 ">Employees List</h1>
+    <section class="myInputs pb-3" id="mymodal">
+     
+      <div class="container w-75">
+        <div class="form-floating mb-3">
+          <input
+          oninput="Validate(this)"
+            type="number "
+            class="form-control"
+            id="EmployeeID"
+            placeholder="ID"
+          />
+          <label for="EmployeeID">ID</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+          oninput="Validate(this)"
+            type="text"
+            class="form-control"
+            id="EmployeeName"
+            placeholder="Employee name"
+          />
+          <label for="EmployeeName"> Employee Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+          oninput="Validate(this)"
+            type="email"
+            class="form-control "
+            id="EmployeeMail"
+            placeholder="Employee Email"
+          />
+          <label for="EmployeeMail"> Mail</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+          oninput="Validate(this)"
+            type="tel"
+            class="form-control"
+            id="EmployeeTele"
+            placeholder="Mobile Number"
+          />
+          <label for="EmployeeTele"> Mobile Number</label>
+        </div>
+        
+        <div class="form-floating mb-3">
+          <input
+            type="text "
+            list="BranchList"
+            class="form-control"
+            id="Branches"
+            placeholder="Branch"
+          />
+          <label for="Category">Branch</label>
+        </div>
+
+        <datalist id="BranchList">
+          <option value="Cairo"></option>
+          <option value="Alex"></option>
+          <option value="PortSaid"></option>
+          <option value="Suez"></option>
+        </datalist>
+
+        <div class="form-floating mb-3">
+          <input
+            type="file"
+            class="form-control"
+            id="productImage"
+            placeholder="productImage"
+          />
+          <label for="productImage">Product Image</label>
+        </div>
+        <div class="alert alert-danger p-2 d-none" id="alert"><small>"in-valid submission all fields required ,pleas try again"</small></div>
+        <div class="d-flex">
+          <button id="addproduct" class="btn btn-primary me-3  "  >Add Product</button>
+          <button id="updateproduct" class="btn btn-success me-3 d-none" onclick="updateProduct()">Update Prodct</button>
+
+        </div>
+<div class="container d-flex justify-content-center align-items-center text-center" >
+    <input id="Search" type="text" placeholder="search product name ..." class="my-4 w-25 py-2 rounded-2 border-1 form-control" onkeyup="searchItem()">
+
+</div>
+      </div>
+    </section>
+    <section class="Product">
+        <div class="container w-75">
+            <table class="table">
+                <thead >
+                  <tr>
+                    <th scope="col" class="text-center  ">ID</th>
+                    <th scope="col" class="text-center">Name</th>
+                    <th scope="col"  class="text-center">Employee Email</th>
+                    <th scope="col"  class="text-center">Tele number</th>
+                    <th scope="col" class="text-center" >Branch</th>
+                    <th scope="col" class="text-center">image</th>
+                    <th scope="col" class="text-center">delete</th>
+                    <th scope="col" class="text-center">update</th>
+                  </tr>
+                </thead>
+                <tbody id="productDisplay" >
+                  
+                 
+                </tbody>
+              </table>
+        </div>
+    </section>
+    </body>
+    <script class=" " src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
